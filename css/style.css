@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
 .video-area{
     grid-area: video-area;
 }
 
 .aside{
     grid-area: aside;
-    
+    /* justify-content: space-around; */
+    padding: 10px 0px;
+    gap: 5px;  
 }
 
 .main{
@@ -16,20 +17,16 @@
     background-color: #F7F7F7;
     display: grid;
     grid: "video-area aside" 415px / 600px 300px;
-    padding: 38px 15px 10px 15px;
+    padding: 40px;
     font-weight: 300;
-    max-width: 900px;
-    
+    width: 900px;
 }
 
-.main .video-area{
-    padding: 5px 0px
-}
 
 .main .video-area .video-title{
     font-size: 18px;
-    padding: 10px 0px;
     font-weight: 700;
+    padding-top: 5px;
 }
 
 .main .video-area .video-views{
@@ -44,9 +41,7 @@
     width: 538px;
 }
 
-.main .aside .adds{
-    padding: 5px 0;
-}
+
 
 .main .aside .next-video-area{
     display: flex;
@@ -64,3 +59,21 @@
     font-size: 11px;
     padding: 2px;
 }
+
+
+@media (max-width: 950px) {
+    .main{
+        grid: "video-area"
+        "aside" 415px
+        / 600px 300px;
+        min-width: 600px;
+        max-width: 600px;
+     
+   
+    }
+
+    .main .aside{
+        margin-top: 20px;
+    }
+
+ }
